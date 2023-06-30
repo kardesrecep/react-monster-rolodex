@@ -27,8 +27,10 @@ const Monsters = () => {
 
 
   return (
-    <Container >
-      <input className="inp"
+    <Container className="cont" >
+   <h1 className='app-title'>Monsters Rolodex</h1>
+
+      <input className="search-box"
         type="search"
         placeholder="Search Monsters"
         onChange={(e) => {setSearchField(e.target.value.toLocaleLowerCase()); }} />
@@ -38,7 +40,7 @@ const Monsters = () => {
               .includes(searchField.toLocaleLowerCase())
           )
           .map((monster) => (
-            <Col key={monster.id} sm={6} md={4} lg={3} xl={4}>
+            <Col key={monster.id} sm={12} md={6} lg={4} xl={4}>
               <MonstersCard {...monster} />
             </Col>
           ))}

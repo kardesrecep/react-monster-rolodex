@@ -4,9 +4,9 @@ import { Card, Container } from "react-bootstrap";
 const MonstersCard = (props) => {
   const { address, company, email, id, name, phone, username, website } = props;
   return (
-    <Container>
-      <Card style={{ width: "20rem",textAlign:"center",borderRadius:"20px", marginBottom:"5rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+    <Container className="cards-container">
+      <Card style={{ width: "20rem",textAlign:"center",borderRadius:"20px" }}>
+        <Card.Img variant="top   alt={`monster ${name}`}   "src={`https://robohash.org/${id}?set=set2&size=180x180`} />
         <Card.Body>
           <Card.Title>{id}</Card.Title>
           <Card.Title>{name}</Card.Title>
